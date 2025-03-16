@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Black+Ops+One&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color:rgba(133, 133, 133, 0.28);
+width: 7px;
+
+
+}
+.loading{
+  position: fixed;
+  top: 0;
+  transition: 0.6s;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #151515;
+  z-index: 99999;
+}.spinner {
+  border: 4px solid #2c2c2c; 
+  border-top: 4px solid #08a5b1; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+ 
+  animation: spin 2s  linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  display: flex;
+  height: 60px;
+  background-color: #00c8d6;
+}
+main {
+  max-width: 1400px;
+  margin: auto;
+  overflow: hidden;
+  background: #151515;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: 0px -2px 230px rgb(0, 47, 255);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+}
+
+
+body {
+  transition: 0.5s;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background-color: #000000fd;
+}
+
+header {
+  transition: 0.5s;
+  height: 60px;
+  max-width: 1400px;
+  position: sticky;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin: auto;
+  background-color: #151515;
+  /* background: rgba(255, 255, 255, 0.075); */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(31px);
+  -webkit-backdrop-filter: blur(31px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+  width: 150px;
+  transform: translateX(60px);
+  overflow: hidden;
+  /* left: 20%; */
+  height: 50px;
+  transition: 0.5s;
+}
+
+.logo a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.logo img {
+  height: 100%;
+  width: 150px;
+}
+
+.search-box{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  justify-content: space-between;
+padding: 0 10px;
+border: 2px solid rgb(95, 94, 94);
+  height: 40px;
+  width: 212px;
+  background-color: #312e2e63;
+}
+.search-box #img{
+  cursor: pointer;
+  height: 50%;
+}
+
+#searchBar{
+  cursor:text;
+border: none;    
+border-radius: 20px;
+ width: 200px;
+ height: 30px;
+ padding: 0 10px;
+  background-color: #313131a4;
+  
+outline: none;
+width: 175px;
+font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 300;
+}
+.hamburger {
+  display: block;
+  cursor: pointer;
+  height: 40px;
+  width: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }.hamburger .line:nth-child(2) {
+    width: 20px;
+  }.hamburger .line:nth-child(3) {
+    width: 10px;
+  }
+
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+  width: 30px;
+}
+.hamburger.active .line{
+  transform: rotateZ(200deg);
+}
+.hamburger .line{
+    height: 1px;
+    width: 30px;
+    margin: 3px 0;
+    transition: 0.3s;
+    background-color: rgb(250, 235, 215);
+}
+.nav-menu {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item .nav-link {
+  color: #fff;
+  list-style: none;
+  transition: 0.1s;
+  text-decoration: none;
+}
+
+.nav-menu .nav-item .nav-link:hover {
+  transition: 0.2s;
+  color: #fff;
+  font-style: italic;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 10px 40px;
+}
+.nav-menu {
+  position: fixed;
+  left: -110%;
+  top: 60px;
+  flex-direction: column;
+  background: #151515;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  list-style: none;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-item {
+  margin: 2.5rem 0;
+}
+#Sec2 {
+  height: 100%;
+  width: 100%;
+  background-color: #151515;
+}
+
+.container2 {
+  height: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: auto;
+}
+
+#productList {
+  height: 100%;
+  max-width: 1300px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 50px;
+  overflow: hidden;
+  padding: 0 20px;
+  /* column-gap: 30px;
+    row-gap: 30px; */
+}
+.card {
+  height: 300px;
+  width: 220px;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  transition: 0.5s;
+}
+.img-box {
+  scale: 1.1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  overflow: hidden;
+  justify-content: center;
+  transition: 0.5s;
+  height: 300px;
+  width: 220px;
+}
+.card:hover .img-box{
+  scale: 1.4;
+  transition: 0.3s;
+}
+.img-box img {
+  object-fit: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  padding: 10px 0;
+  transform: translateY(-80%);
+  height: 100px;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  transition: 0.3s;
+  backdrop-filter: blur(4px);
+  background-color: #00000086;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.title h3 {
+ 
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  padding: 0 4px;
+  text-shadow: 0px 0px 20px #000000;
+  text-transform: capitalize;
+}
+
+.rating {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-box {
+  height: 40px;
+  width: 40%;
+  box-shadow: 0px 0px 0px #afb1b100;
+  background-color: #4d53556c;
+  flex-wrap: nowrap;
+  display: flex;
+  gap: 10px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rating-box img {
+  height: 15px;
+}
+
+.rating-box h4 {
+  font-size: 18px;
+  text-shadow: 2px 2px 20px #000000;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.span-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+  width: 50%;
+}
+
+.span-box span {
+  height: 24px;
+  width: 40px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfe2e28e;
+  font-weight: 560;
+  font-size: 15px;
+}
+
+.card:hover .title {
+  transition: 0.3s;
+  padding: 010px;
+  transform: translateY(-100%);
+}
+
+.movie-poster1 {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.322), #151515),
+    url(img-poster/killer\ game.webp) no-repeat;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.text-poster {
+  transition: 0.5s;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  height: 400px;
+  padding: 0 20px;
+  width: 50%;
+  background-color: #1515153d;
+}
+
+.text-poster h3 {
+  color: #fff;
+  font-family: barriecito;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.text-poster h1{
+  color: #fff;
+  
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.text-poster p {
+  letter-spacing: 1.5px;
+  line-height: 16px;
+  color: #fff;
+  font-size: 15px;
+  font-family: comic sans ms;
+}
+
+.text-poster button{
+  height: 50px;
+  width: 130px;
+  cursor: pointer;
+  border: none;
+  backdrop-filter: blur(19px);
+  border: 2px solid #ffffff;
+  background-color: #1e242554;
+  border-radius: 10px;
+  color: #fff;
+  transition: 0.3s;
+}.text-poster button a{
+  text-decoration: none;
+   color: #fff;
+
+}
+.text-poster button:hover{
+  transition: 1s;
+  box-shadow: 5px 5px 20px #282829;
+  border-radius: 100px;
+  text-shadow: 0px 0px 10px #b1b1c4;
+  background-color: #282829;
+  
+  color: #fff;
+}
+
+.movie-poster2 {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.322), #151515),
+    url(img-poster/heart\ of\ the\ hunter.webp) no-repeat;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  transition: 0.5s;
+  align-items: center;
+}
+
+.movie-poster3 {
+  height: 400px;
+  width: 100%;
+  transition: 0.5s;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.322), #151515),
+    url(img-poster/evil\ dead\ of\ rise.webp) no-repeat;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+footer{
+  transition: 0.5s;
+  height: 200px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ flex-direction: column;
+  width: 100%;
+}
+ 
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+  width: 150px;
+  overflow: hidden;
+  /* left: 20%; */
+  height: 50px;
+  transition: 0.5s;
+}
+.footer-logo img{
+  height: 100%;
+  width: 300px;
+  object-fit: cover;
+}
+
+
+
+
+footer p{
+  text-align: center;
+  font-size: 15px;
+  transition: 0.5s;
+  color: #fff;
+  text-transform: capitalize;
+  font-family:  Outfit;
+}
+
+    @media (max-width:770px) {
+      .card{
+        height: 250px;
+        
+        width: 200px;
+        transition: 1s;
+      }
+      .card .title{
+        transition: 1s;
+        transform: translateY(-100%);
+      }.card:hover .title{
+        padding: 0 0 ;
+        transform: translateY(-150%);
+      }
+ 
+    }
+    @media (max-width:650px) {
+      .logo{
+      transition: 1s;
+      transform: none;
+      transition: 0.3s;
+      
+      }
+html ,body{
+  scroll-behavior: smooth;
+  
+}   .container2-1 ,.container2-2 ,.container2-3 , .container2-4{
+        transition: 0.3s;
+        margin: unset;
+        flex-direction: column;
+}
+.logo img{
+  transition: 0.5s;
+  height: 130px;
+  width: 130px;
+}.footer-logo img{
+  transition: 0.5s;
+  height: 130px;
+  width: 130px;
+}
+
+.card {
+  height: 180px;
+  width:170px;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.img-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  overflow: hidden;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+}
+
+.img-box img {
+  object-fit: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+   .rating img{
+    height: 30%;
+   }
+    .rating h4{
+      font-size: 12px;
+    }
+    .card .title {
+      transition: 0.3s;
+      padding: 0 4px;
+      transform: translateY(-200%);
+      
+    }.card:hover .title {
+      transition: 0.3s;
+      padding: 0 4px;
+      transform: translateY(-190%);
+      
+    }
+.card .title h3{
+  font-size:18px;
+  font-family: cascadia code;
+}
+.movie-poster1 , .movie-poster2 , .movie-poster3 {
+  align-items: last baseline;
+}
+.text-poster{
+   height: 70%;
+   backdrop-filter: blur(2px);
+   width: 100%;
+}   
+
+
+
+
+    
+}
+
+      @media (max-width:550px) {
+   footer p{
+    font-size: 10px;
+   }
+   .text-poster button{
+    height: 35px;
+    width: 100px;
+    transition: 0.3s;
+    font-size: 12px;
+   }
+
+
+     .logo{
+     height: 50px;
+     transition: 0.5s;
+     width: 100px;
+     }
+     .logo img{
+      height: 100px;
+      transition: 0.5s;
+      width: 100px;
+       }.footer-logo img{
+        height: 100px;
+        transition: 0.5s;
+        width: 100px;
+         }
+         .search-box{
+         width: 120px;
+         border: none;
+         transition: 0.5s;
+         background-color:transparent;
+         }
+         #searchBar{
+          height: 25px;
+          text-transform: capitalize;
+          transition: 0.5s;
+          font-size: 10px;
+          font-weight: 400;
+          width: 100px;
+         }
+         .search-box img{
+         display: none;
+         }
+
+
+#productList {
+  justify-content: center;
+padding: unset;
+}
+
+       .card{
+        height: 250px;
+        width: 400px;
+       }  
+       .rating img{
+        height: 30%;
+       }
+        .rating h4{
+          letter-spacing: 2px;
+          font-size: 14px;
+        }
+        .card .title {
+          height: 150px;
+          gap: 40px;
+          transition: 0.3s;
+          padding: 10px 0px;
+          transform: translateY(-120%);
+          
+        }
+        .card:hover .title{
+          transform: translateY(-120%);
+        }
+    .card .title h3{
+      font-size:18px;
+      font-family: cascadia code;
+    }
+      
+        
+      }
+      
+    @media (max-width: 410px) {
+.card {
+  height: 180px;
+  width: 300px;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.card .title{
+  height: 110px;
+  transform: translateY(-208%);
+}
+.logo img{
+  height: 80px;
+  width: 80px;
+}
+.footer-logo img{
+  height: 80px;
+  width: 80px;
+}
+
+.text-poster h3{
+  font-family: black ops one;
+  font-size: 20px;
+}
+.text-poster p{
+  font-size: 12px;
+}
+.text-poster button {
+  height: 28px;
+
+  width: 100px;font-size: 13px;
+}
+   }
+@media (max-width: 300px) {
+  .nav-menu{
+    width: 100%;
+  }
+  .logo{
+    transition: 0.3s;
+    transform: translateX(3px);
+   }
+   .nav-menu{
+    width: 80%;
+    border-bottom-left-radius: 0px;
+    font-size: 13px;
+   }
+.poster{
+  margin-left: -100px;
+  margin-top: 100px;
+  height: 250px;
+  width: 200px;
+}
+.card{
+  width: 250px;
+}
+
+
+
+}

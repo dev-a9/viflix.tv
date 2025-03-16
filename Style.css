@@ -1,0 +1,1337 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Black+Ops+One&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color:rgba(133, 133, 133, 0.28);
+width: 7px;
+
+
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  display: flex;
+  height: 60px;
+  background-color: #00c8d6;
+}
+.loading{
+  position: fixed;
+  top: 0;
+  transition: 0.6s;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #151515;
+  z-index: 99999;
+}.spinner {
+  border: 4px solid #2c2c2c; 
+  border-top: 4px solid #08a5b1; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+ 
+  animation: spin 2s  linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+main {
+  max-width: 1400px;
+  margin: auto;
+  overflow: hidden;
+  /* From https://css.glass */
+  background: rgba(133, 133, 133, 0.28);
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: 0px -2px 230px rgb(0, 17, 255);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  
+}
+
+
+body {
+  transition: 0.5s;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background-color: #000000fd;
+}
+
+header {
+  transition: 0.5s;
+  height: 60px;
+  max-width: 1400px;
+  position: sticky;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin: auto;
+  background-color: #282829;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(31px);
+  -webkit-backdrop-filter: blur(31px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  transform: translateX(60px);
+  overflow: hidden;
+  height: 50px;
+  transition: 0.5s;
+}
+
+.logo a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.logo img {
+  height: 100%;
+  width: 150px;
+}
+.search-box{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  justify-content: space-between;
+padding: 0 10px;
+border: 2px solid rgb(95, 94, 94);
+  height: 40px;
+  width: 212px;
+  background-color: #312e2e63;
+}
+.search-box #img{
+  cursor: pointer;
+  height: 50%;
+}
+
+#searchBar{
+  cursor:text;
+border: none;    
+border-radius: 20px;
+ width: 175px;
+ outline: none;
+ height: 30px;
+ padding: 0 10px;
+  background-color: #313131a4;
+  
+font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 300;
+}
+.hamburger {
+  display: block;
+  cursor: pointer;
+  height: 40px;
+  width: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.line {
+  background-color: rgb(255, 255, 255);
+  width: 30px;
+  height: 1.8px;
+  border-radius: 10px;
+  margin: 3px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /* background-color: #101010; */
+}
+
+.line:nth-child(2) {
+  width: 15px;
+
+}
+.nav-menu {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item .nav-link {
+  color: #fff;
+  list-style: none;
+  transition: 0.1s;
+  text-decoration: none;
+}
+
+.nav-menu .nav-item .nav-link:hover {
+  transition: 0.2s;
+  color: #fff;
+  font-style: italic;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 10px 40px;
+}
+.nav-menu {
+  position: fixed;
+  left: -110%;
+  top: 60px;
+  flex-direction: column;
+  background: #282829;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+  list-style: none;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-item {
+  margin: 2.5rem 0;
+}
+
+
+#Sec1 {
+  width: 100%;
+  height: 700px;
+}
+
+.container1 {
+  background-color: #dfe2e22a;
+  height: 400px;
+  margin: auto;
+  max-width: 1400px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  
+  border-radius: 0px;
+}
+
+.container1::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 500px;
+  width: 100%;
+  background-color: transparent #000;
+}
+
+.container1 .slide .item {
+  width: 130px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 0px 50px #000000;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 1s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+
+.slide .item:nth-child(3) {
+  left: 50%;
+}
+
+.slide .item:nth-child(4) {
+  left: calc(45% + 220px);
+}
+
+.slide .item:nth-child(5) {
+  left: calc(40% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6) {
+  left: calc(0% + 660px);
+  opacity: 0;
+}
+
+.item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 200px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  
+  font-family: "Poppins", sans-serif;
+  display: none;
+}
+
+.slide .item:nth-child(2) .content {
+  display: block;
+}
+
+.content .name {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 0.3s ease-in-out 1 forwards;
+}
+
+.content .des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 0.3s ease-in-out 0.3s 1 forwards;
+}
+
+.content button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 0.3s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.button button {
+  height: 35px;
+  width: 100px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  backdrop-filter:  blur(1px);
+  background-color: #cacccc18;
+  /* background: linear-gradient(150deg, rgba(19, 255, 255, 0.233) 0%, rgba(1, 29, 26, 0.719) 50%);  */
+  color: #ffffff;
+  font-size: 13px;
+  font-family:arial;
+  scale: 0.9;
+  transition: 0.1s;
+  font-weight: 800;
+  border: 2px solid #000;
+}
+
+.button button:hover {
+  transition: 0.1s;
+  color: #000;
+  font-size: 20px;
+  font-style: italic;
+   scale: 1;
+background:  rgb(0, 162, 177);
+
+box-shadow: 0px 0px 20px   rgb(0, 162, 177);
+}
+
+.poster {
+  overflow: hidden;
+  height: 300px;
+  width: 450px;
+  transition: 0.5s;
+  padding: 20px;
+  line-height: 20px;
+  border-radius: 29px;
+  backdrop-filter: blur(5px);
+  background: linear-gradient(
+    50deg,
+    rgb(0, 162, 177) 0%,
+    rgba(0, 12, 15, 0.774) 60%
+  );
+  opacity: 0;
+  animation: animate 0.5s ease-in-out 0.6s 1 forwards;
+}
+
+.poster h1 {
+  text-transform: capitalize;
+  letter-spacing: 0.4px;
+  text-align: left;
+  font-size: 20px;
+ 
+  font-family: "Poppins", sans-serif;
+   color: #ffffffe3;
+}
+
+.poster p {
+  font-size: 15px;
+  text-transform: capitalize;
+  color: #ffffffce;
+}
+
+.heading-box {
+  height: 50%;
+  display: flex;
+
+  gap: 1px;
+  justify-content: center;
+  line-height: 20px;
+  flex-direction: column;
+}
+
+.heading-box h4 {
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.heading-box h4 span {
+  color: #bbb9b9ef;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+.heading-box h4 a {
+  text-transform: capitalize;
+  color: #cecece;
+  font-size: 15px;
+}
+
+#Sec2 {
+  height: 100%;
+  width: 100%;
+}
+
+.container2 {
+  height: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: auto;
+}
+
+#productList {
+  height: 100%;
+  max-width: 1300px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 50px;
+  overflow: hidden;
+  padding: 0 20px;
+  /* column-gap: 30px;
+    row-gap: 30px; */
+}
+.card {
+  height: 300px;
+  width: 220px;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  transition: 0.5s;
+}
+.img-box {
+  scale: 1.1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  overflow: hidden;
+  justify-content: center;
+  transition: 0.5s;
+  height: 300px;
+  width: 220px;
+}
+.card:hover .img-box{
+  scale: 1.4;
+  transition: 0.3s;
+}
+
+.img-box img {
+  object-fit: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  padding: 10px 0;
+  transform: translateY(-80%);
+  height: 100px;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  transition: 0.3s;
+  backdrop-filter: blur(4px);
+  background-color: #00000086;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.title h3 {
+  
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  padding: 0 4px;
+  text-shadow: 0px 0px 20px #000000;
+  text-transform: capitalize;
+}
+
+.rating {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-box {
+  height: 40px;
+  width: 40%;
+  box-shadow: 0px 0px 0px #afb1b100;
+  background-color: #4d53556c;
+  flex-wrap: nowrap;
+  display: flex;
+  gap: 10px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rating-box img {
+  height: 15px;
+}
+
+.rating-box h4 {
+  font-size: 18px;
+  text-shadow: 2px 2px 20px #000000;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.span-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+  width: 50%;
+}
+
+.span-box span {
+  height: 24px;
+  width: 40px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfe2e28e;
+  font-weight: 560;
+  font-size: 15px;
+}
+
+.card:hover .title {
+  transition: 0.3s;
+  padding: 0 10px;
+  transform: translateY(-100%);
+}
+
+.movie-poster1 {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.322), #151515),
+    url(img-poster/killer\ game.webp) no-repeat;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+} 
+
+
+.text-poster {
+  transition: 0.5s;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  height: 400px;
+  padding: 0 20px;
+  width: 50%;
+  background-color: #1515153d;
+}
+
+.text-poster h3 {
+  color: #fff;
+  font-family: barriecito;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.text-poster p {
+  letter-spacing: 1.5px;
+  line-height: 16px;
+  color: #fff;
+  font-size: 15px;
+  font-family: comic sans ms;
+}
+
+.text-poster button{
+  height: 50px;
+  width: 130px;
+  cursor: pointer;
+  border: none;
+  backdrop-filter: blur(19px);
+  border: 2px solid #ffffff;
+  background-color: #1e242554;
+  border-radius: 10px;
+  color: #fff;
+  transition: 0.3s;
+}.text-poster button a{
+  text-decoration: none;
+   color: #fff;
+
+}
+.text-poster button:hover{
+  transition: 1s;
+  box-shadow: 5px 5px 20px #282829;
+  border-radius: 100px;
+  text-shadow: 0px 0px 10px #b1b1c4;
+  background-color: #282829;
+  
+  color: #fff;
+}
+
+.movie-poster2 {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.322), #151515),
+    url(img-poster/heart\ of\ the\ hunter.webp) no-repeat;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  transition: 0.5s;
+  align-items: center;
+}
+
+.movie-poster3 {
+  height: 400px;
+  width: 100%;
+  transition: 0.5s;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.322), #151515),
+    url(img-poster/evil\ dead\ of\ rise.webp) no-repeat;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+footer{
+  transition: 0.5s;
+  height: 200px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ flex-direction: column;
+  width: 100%;
+}
+ 
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+  width: 150px;
+  overflow: hidden;
+  /* left: 20%; */
+  height: 50px;
+  transition: 0.5s;
+}
+.footer-logo img{
+  height: 100%;
+  width: 300px;
+  object-fit: cover;
+}
+
+
+
+
+footer p{
+  text-align: center;
+  font-size: 15px;
+  transition: 0.5s;
+  color: #fff;
+  text-transform: capitalize;
+  font-family:  Outfit;
+}
+@media (max-width: 1000px) {
+  #Sec1{
+    height: 550px;
+  }
+  .poster{
+    margin-left: -80px;
+  }
+  }@media (max-width: 900px) {
+    
+    
+  
+  .poster .name{
+    font-size: 30px;
+    transition: 0.3s;
+  }
+
+  .poster p{
+    font-size: 15px;
+  }
+  .heading-box{
+  line-height: 15px;
+ }
+ .heading-box h4 span{
+  font-size: 12px;
+}
+.heading-box h4{
+ font-size: 12px;
+}
+.container2-1 ,.container2-2 ,.container2-3 , .container2-4{
+  
+  transition: 0.3s;
+}
+    }
+    @media (max-width:770px) {
+      .container2-1 ,.container2-2 ,.container2-3 , .container2-4{
+       
+        transition: 0.3s;
+      } 
+        
+      .card{
+        height: 250px;
+        
+        width: 200px;
+        transition: 1s;
+      }
+      .card .title{
+        transition: 1s;
+        transform: translateY(-100%);
+      }.card:hover .title{
+        padding: 0 0 ;
+        transform: translateY(-150%);
+      }
+ 
+    }
+    @media (max-width: 700px) {
+ 
+      .logo{
+        transition: 1s;
+        transform: none;
+      }
+html ,body{
+  scroll-behavior: smooth;
+  
+}
+      .poster{
+        
+        margin-left: -100px;
+      }
+      
+.container1 .slide .item {
+  width: 130px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -10%);
+  border-radius: 20px;
+  box-shadow: 0 0px 50px #000000;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 1s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.slide .item:nth-child(3) {
+  left: 45%;
+}
+
+.slide .item:nth-child(4) {
+  left: calc(35% + 220px);
+}
+
+.slide .item:nth-child(5) {
+  left: calc(35% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6) {
+  left: calc(35% + 660px);
+  opacity: 0;
+}
+
+.item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 200px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  
+  font-family: "Poppins", sans-serif;
+  display: none;
+}
+
+.slide .item:nth-child(2) .content {
+  display: block;
+}
+      }
+    @media (max-width:650px) {
+      .container2-1 ,.container2-2 ,.container2-3 , .container2-4{
+        transition: 0.3s;
+        margin: unset;
+        flex-direction: column;
+}
+.logo img{
+  transition: 0.5s;
+  height: 130px;
+  width: 130px;
+}
+ .footer-logo img{
+  transition: 0.5s;
+  height: 130px;
+  width: 130px;
+}
+
+.card {
+  height: 180px;
+  width:170px;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.img-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  overflow: hidden;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+}
+
+.img-box img {
+  object-fit: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+   .rating img{
+    height: 30%;
+   }
+    .rating h4{
+      font-size: 12px;
+    }
+    .card .title {
+      transition: 0.3s;
+      padding: 0 4px;
+      transform: translateY(-200%);
+      
+    }.card:hover .title {
+      transition: 0.3s;
+      padding: 0 4px;
+      transform: translateY(-190%);
+      
+    }
+.card .title h3{
+  font-size:18px;
+  font-family: cascadia code;
+}
+.movie-poster1 , .movie-poster2 , .movie-poster3 {
+  align-items: last baseline;
+}
+.text-poster{
+   height: 70%;
+   backdrop-filter: blur(2px);
+   width: 100%;
+}   
+
+.container1 .slide .item {
+width: 130px;
+height: 200px;
+position: absolute;
+top: 50%;
+transform: translate(0, -10%);
+border-radius: 20px;
+box-shadow: 0 0px 50px #000000;
+background-position: 50% 50%;
+background-size: cover;
+display: inline-block;
+transition: 1s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+top: 0;
+left: 0;
+transform: translate(0, 0);
+border-radius: 0;
+width: 100%;
+height: 100%;
+transition: 0.3s;
+}
+
+.slide .item:nth-child(3) {
+left: 45%;
+}
+
+.slide .item:nth-child(4) {
+left: calc(35% + 220px);
+}
+
+.slide .item:nth-child(5) {
+left: calc(35% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6) {
+left: calc(35% + 660px);
+opacity: 0;
+}
+
+.item .content {
+position: absolute;
+top: 50%;
+left: 100px;
+width: 200px;
+text-align: left;
+color: #eee;
+transform: translate(0, -50%);
+
+font-family: "Poppins", sans-serif;
+display: none;
+}
+
+.slide .item:nth-child(2) .content {
+display: block;
+}
+
+
+
+
+    
+}
+
+      @media (max-width:550px) {
+        .logo{
+          transition: 0.3s;
+          transform: translateX(0px);
+         }
+         
+   .text-poster button{
+    height:30px;
+    width: 100px;
+    transition: 0.3s;
+    font-size: 12px;
+   } 
+.hamburger .line{
+  height: 1px;
+ 
+ margin: 2.5px 0; width: 25px;
+}
+.line:nth-child(2){
+  width: 13px;
+}
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(7px) rotate(47deg);
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-7px) rotate(-47deg);
+  
+}
+
+
+        .poster{
+          background: #282829;
+          transition: 0.5s;
+          height: 200px;
+          border-radius: 10px;
+          overflow-y: scroll;
+          scroll-behavior: smooth;
+        }
+        .poster h1{
+          letter-spacing: 2px;
+        }
+        .poster p{
+          font-size: 15px;
+        }
+        .heading-box{
+        line-height: 15px;
+       }
+       .heading-box h4 span{
+        font-size: 10px;
+      }  .heading-box h4 a{
+        font-size: 10px;
+      }
+      .heading-box h4{
+       font-size: 11px;
+      }
+     header{
+      transition: 0.5s;
+     padding:  0 10px;
+     }
+     .button button{
+    height: 25 px;
+      width: 60px;
+      background-color:#282829;
+      color: #fff;
+      letter-spacing: 2px;
+      font-weight: 200;
+      border: 2px solid #08a5b1;
+      transition: 0.5s;
+    
+      font-size: 13px;
+      
+     }
+     .container1 .slide .item {
+     width: 80px;
+     height: 140px;
+     position: absolute;
+     top: 50%;
+     transform: translate(0, -10%);
+     border-radius: 10px;
+     box-shadow: 0 0px 50px #000000;
+     background-position: 50% 50%;
+     background-size: cover;
+     display: inline-block;
+     transition: 1s;
+     }
+     
+     .slide .item:nth-child(1),
+     .slide .item:nth-child(2) {
+     top: 0;
+     left: 0;
+     transform: translate(0, 0);
+     border-radius: 0;
+     width: 100%;
+     height: 100%;
+     transition: 0.5s;
+    }
+     
+     .slide .item:nth-child(3) {
+     left: 55%;
+     }
+     
+     .slide .item:nth-child(4) {
+     left: calc(20% + 250px);
+     }
+     
+     .slide .item:nth-child(5) {
+     left: calc(15% + 440px);
+     }
+     
+     /* here n = 0, 1, 2, 3,... */
+     .slide .item:nth-child(n + 6) {
+     left: calc(35% + 660px);
+     opacity: 0;
+     }
+     
+     .logo{
+     height: 50px;
+     transition: 0.5s;
+     width: 100px;
+     }
+     .logo img{
+      height: 100px;
+      transition: 0.5s;
+      width: 100px;
+       } .footer-logo img{
+        height: 100px;
+        transition: 0.5s;
+        width: 100px;
+         }
+     .search-box{
+     width: 120px;
+     border: none;
+     transition: 0.5s;
+     background-color:transparent;
+     }
+     #searchBar{
+      height: 25px;
+      text-transform: capitalize;
+      transition: 0.5s;
+      font-size: 10px;
+      font-weight: 400;
+      width: 100px;
+     }
+     .search-box img{
+     display: none;
+     }
+    
+
+
+#productList {
+  justify-content: center;
+padding: unset;
+}
+
+       .card{
+        height: 250px;
+        width: 400px;
+       }  
+       .rating img{
+        height: 30%;
+       }
+        .rating h4{
+          letter-spacing: 2px;
+          font-size: 14px;
+        }
+        .card .title {
+          height: 150px;
+          gap: 40px;
+          transition: 0.3s;
+          padding: 10px 0px;
+          transform: translateY(-120%);
+          
+        }
+        .card:hover .title{
+          transform: translateY(-120%);
+        }
+    .card .title h3{
+      font-size:18px;
+      font-family: cascadia code;
+    }
+      
+       .poster{
+            width: 350px;
+        }
+        .poster .name{
+           font-family: black ops one;
+          font-size: 20px;
+        }
+
+        .poster p{
+          font-size: 10px;
+        }
+         .heading-box{
+         font-size: 8px;
+         line-height: 15px;
+        }
+        
+      }
+      
+    @media (max-width: 410px) {
+        .container2-1 ,.container2-2 ,.container2-3 , .container2-4{
+          transition: 0.3s;
+        
+          margin: unset;
+
+  }       
+.card {
+  height: 180px;
+  width: 300px;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.card .title{
+  height: 110px;
+  transform: translateY(-208%);
+}
+.logo img{
+  height: 80px;
+  width: 80px;
+}
+.footer-logo img{
+  height: 80px;
+  width: 80px;
+}
+.poster{
+  height: 400px;
+  width: 450px;
+  margin-left: -80px;
+}
+
+.container1 .slide .item {
+width: 80px;
+height:130px;
+position: absolute;
+top: 50%;
+transform: translate(50%, -0%);
+border-radius: 10px;
+box-shadow: 0 0px 50px #000000;
+background-position: 50% 50%;
+background-size: cover;
+display: inline-block;
+transition: 1s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+top: 0;
+left: 0;
+transform: translate(0, 0);
+border-radius: 0;
+width: 100%;
+height: 100%;
+transition: 0.3s;
+}
+
+.slide .item:nth-child(3) {
+left: 50%;
+}
+
+.slide .item:nth-child(4) {
+left: calc(4% + 230px);
+}
+
+.slide .item:nth-child(5) {
+left: calc(5% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6) {
+left: calc(35% + 660px);
+opacity: 0;
+}
+
+.item .content {
+position: absolute;
+top: 50%;
+left: 100px;
+width: 200px;
+text-align: left;
+color: #eee;
+transform: translate(0, -50%);
+font-family: system-ui;
+display: none;
+}
+
+.slide .item:nth-child(2) .content {
+display: block;
+}
+.poster{
+  margin-left: -100px;
+  margin-top: 100px;
+  height: 250px;
+  width: 300px;
+}
+
+.text-poster h3{
+  font-family: black ops one;
+  font-size: 20px;
+}
+.text-poster p{
+  font-size: 12px;
+}
+.text-poster button {
+  height:28px;
+    width: 80px;
+    transition: 0.3s;
+    font-size: 10px;
+}
+   }
+@media (max-width: 300px) {
+  
+  .logo{
+    transition: 0.3s;
+    transform: translateX(3px);
+   }
+   .nav-menu{
+    width: 80%;
+    border-bottom-left-radius: 0px;
+
+    font-size: 13px;
+   }
+.poster{
+  margin-left: -100px;
+  margin-top: 100px;
+  height: 250px;
+  width: 200px;
+}
+.card{
+  width: 250px;
+}
+
+
+
+}
