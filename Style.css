@@ -1007,6 +1007,15 @@ display: block;
           transform: translateX(0px);
          }
          
+#Sec2 {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+.container2{
+  max-width: 549px;
+}
+         
    .text-poster button{
     height:30px;
     width: 100px;
