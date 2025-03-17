@@ -455,6 +455,7 @@ box-shadow: 0px 0px 20px   rgb(0, 162, 177);
 #Sec2 {
   height: 100%;
   width: 80%;
+  background-color: red;
   margin: auto;
 }
 
