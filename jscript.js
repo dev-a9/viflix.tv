@@ -8,14 +8,9 @@ next.addEventListener('click', function(){
 
 prev.addEventListener('click', function(){
     let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+    document.querySelector('.slide').prepend(items[items.length - 1]) 
 });
-// humburger = document.querySelector(".humburger");
-// humburger.onclick = function() {
-//        Navbar = document.querySelector(".Nav-bar");
-//        Navbar.classList.toggle("Active");
-       
-//    };
+
 const hamburger = document.querySelector(".hamburger");
 const ul = document.querySelector(".nav-menu");
 
@@ -27,7 +22,6 @@ function mobileMenu() {
 }
 
 
-// when we click on hamburger icon its close 
 
 const a = document.querySelectorAll(".nav-link");
 
@@ -36,7 +30,7 @@ a.forEach(n => n.addEventListener("click", closeMenu));
 function closeMenu() {
     hamburger.classList.remove("active");
     ul.classList.remove("active");
-}
+};
         function searchProduct() {
             const searchInput = document.getElementById('searchBar').value.toLowerCase();
             const products = document.getElementById('productList').getElementsByTagName('a');
