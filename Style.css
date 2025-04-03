@@ -293,13 +293,6 @@ font-family: "Poppins", sans-serif;
 .slide .item:nth-child(5) {
   left: calc(40% + 440px);
 }
-
-/* here n = 0, 1, 2, 3,... */
-.slide .item:nth-child(n + 6) {
-  left: calc(0% + 660px);
-  opacity: 0;
-}
-
 .item .content {
   position: absolute;
   top: 50%;

@@ -1,16 +1,27 @@
+// let next = document.querySelector('.next')
+// let prev = document.querySelector('.prev')
+
+// next.addEventListener('click', function(){
+//     let items = document.querySelectorAll('.item')
+//     document.querySelector('.slide').appendChild(items[0])
+// });
+
+// prev.addEventListener('click', function(){
+//     let items = document.querySelectorAll('.item')
+//     document.querySelector('.slide').prepend(items[items.length - 1]) 
+// });
 let next = document.querySelector('.next')
-let prev = document.querySelector('.prev')
-
-next.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').appendChild(items[0])
-});
-
-prev.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').prepend(items[items.length - 1]) 
-});
-
+  let prev = document.querySelector('.prev')
+  
+  next.addEventListener('click', function(){
+      let items = document.querySelectorAll('.item')
+      document.querySelector('.slide').appendChild(items[1])
+  });
+  
+  prev.addEventListener('click', function(){
+      let items = document.querySelectorAll('.item')
+      document.querySelector('.slide').prepend(items[items.length - 3]) 
+  });
 const hamburger = document.querySelector(".hamburger");
 const ul = document.querySelector(".nav-menu");
 
