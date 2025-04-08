@@ -815,7 +815,21 @@ footer p{
        
         transition: 0.3s;
       } 
-        
+     
+      #popup h1{
+        transition: 0.4s;
+        letter-spacing: 2px;
+      font-size: 25px;
+      }   #popup h2{
+        font-size: 20px;
+        transition: 0.4s;
+        }      #popup p{
+          font-size: 13px;
+          transition: 0.4s;
+          }       #popup span{
+            font-size: 13px;
+            transition: 0.4s;
+            }        
       .card{
         height: 250px;
         
@@ -912,6 +926,7 @@ html ,body{
         margin: unset;
         flex-direction: column;
 }
+
 .logo img{
   transition: 0.5s;
   height: 130px;
@@ -1046,7 +1061,9 @@ display: block;
 }
 
       @media (max-width:550px) {
-        .logo{
+        #popup{
+          height: 650px;
+        }.logo{
           transition: 0.3s;
           transform: translateX(0px);
          }
@@ -1259,7 +1276,27 @@ padding: unset;
         
           margin: unset;
 
-  }       
+  }    
+  #popup{
+    height: 600px;
+  }  
+    
+  #popup h1{
+    transition: 0.4s;
+    letter-spacing: 2px;
+  font-size: 20px;
+  }   #popup h2{
+    font-size: 17px;
+    transition: 0.4s;
+    text-align: center;
+    }      #popup p{
+      font-size: 10px;
+      transition: 0.4s;
+      }       #popup span{
+        font-size: 10px;
+        transition: 0.4s;
+        }        
+
 .card {
   height: 180px;
   width: 300px;
