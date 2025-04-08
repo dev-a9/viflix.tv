@@ -32,6 +32,67 @@ width: 7px;
   background-color: #151515;
   z-index: 99999;
 }
+#popup {
+  position: fixed;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-direction: column;
+  left: 50%;
+  top: 320px;
+  transform: translate(-50%, -50%);
+  background-color: #7b77773f;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  box-shadow: 0 0 100px rgba(8, 254, 246, 0.956);
+  z-index: 9999;
+  align-items: center;
+  border: 2px solid rgba(8, 254, 246, 0.956);
+  width: 80%;
+  height: 500px;
+  color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#content {
+  display: none;
+}
+#popup button{
+height: 30px;
+width: 100px;
+background-color: #04eeff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;font-family: black ops one;
+font-size: 15px;
+}
+#popup button:hover{
+transition: 0.5s;
+border-radius: 20px;
+box-shadow: 0px 0px 20px #04eeff;
+
+  background-color: #04eeff;
+  
+}
+
+#popup p{
+  text-transform: capitalize;
+  padding:10px 20px;
+  text-align: center;
+}
+#popup h1{
+  color: #00c8d6;
+  font-family: black ops one;
+
+}#popup h2{
+  letter-spacing: 2px;  
+  color: #fff;
+  font-weight: 100;
+  font-family: black ops one;
+
+}
+
 
 
 
@@ -434,6 +495,7 @@ box-shadow: 0px 0px 20px   rgb(0, 162, 177);
   font-size: 15px;
 }
 
+.poster-btn
 #Sec2 {
   height: 100%;
   width: 100%;
