@@ -819,12 +819,14 @@ footer p{
       }   #popup h2{
         font-size: 20px;
         transition: 0.4s;
+        text-align: center;
         }      #popup p{
           font-size: 13px;
           transition: 0.4s;
           }       #popup span{
             font-size: 13px;
             transition: 0.4s;
+            text-align: center;
             }        
       .card{
         height: 250px;
